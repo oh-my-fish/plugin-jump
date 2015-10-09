@@ -1,6 +1,8 @@
 function init -a path --on-event init_jump
+  if not set -q MARKPATH
     set -gx MARKPATH $HOME/.marks
     command mkdir -p $MARKPATH
+  end
 end
 
 function jump
@@ -13,4 +15,11 @@ function jump
       echo "No such mark: $argv[1]"
     end
   end
+end
+
+
+if not set -q MARKPATH
+  echo "Not defined"
+else 
+  echo $MARKPATH
 end
