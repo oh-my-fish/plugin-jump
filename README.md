@@ -9,7 +9,7 @@
 
 #  jump
 
-A port of [Jeroen Janssens' "jump" utility] [1] to the fish shell (and [Oh My Fish!] [omf-link]).
+A port of [Jeroen Janssens' "jump" utility][1] to the fish shell (and [Oh My Fish!][omf-link]).
 
 ## Configuration
 
