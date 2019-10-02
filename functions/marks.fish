@@ -15,15 +15,12 @@ function marks
       if test (count $mark_list) -eq 0
         echo "No marks currently defined."
       else
-        set -l current_dir (pwd)
         set -l output ""
         for mark_name in $mark_list
-          cd $MARKPATH/$mark_name
-          set -l real_path (pwd)
+          set -l real_path (readlink $MARKPATH/$mark_name)
           set output "$output$mark_name -> $real_path"\n
         end
         echo $output | column -t
-        cd $current_dir
       end
     end
   end
