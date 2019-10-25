@@ -17,7 +17,7 @@ function marks
       else
         set -l output ""
         for mark_name in $mark_list
-          set -l real_path (readlink $MARKPATH/$mark_name)
+          set -l real_path (realpath $MARKPATH/$mark_name)
           set output "$output$mark_name -> $real_path"\n
         end
         echo $output | column -t
